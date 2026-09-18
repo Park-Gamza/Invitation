@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f4ed">
+  <meta name="description" content="소중한 분들을 저희의 결혼식에 초대합니다.">
+  <title>모바일 청첩장</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <div class="hero__top"><span>WEDDING INVITATION</span><div class="hero__controls"><span id="year">2026</span><div class="language-switch" role="group" aria-label="언어 선택"><button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div></div></div>
+    <div class="hero__art" aria-hidden="true"><div class="sun"></div><div class="arch"></div><div class="hill"></div><span class="flower flower--a">✳</span><span class="flower flower--b">✳</span><span class="flower flower--c">✳</span></div>
+    <div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" id="hero-date">2026. 11. 29. SUNDAY</p><p id="hero-place">오후 12시 · 셀레네하우스웨딩 청주점</p></div>
+    <a class="scroll" href="#invitation"><span data-i18n="scroll">SCROLL</span> <span aria-hidden="true">↓</span></a>
+  </header>
+
+  <section class="section invitation" id="invitation">
+    <span class="section__label">01 / INVITATION</span><span class="ornament" aria-hidden="true">✳</span>
+    <h2 data-i18n-html="invitationTitle">서로의 하루에<br>가장 다정한 사람이 되겠습니다.</h2>
+    <p class="invitation__message" data-i18n-html="invitationMessage">계절이 바뀌는 동안 서로를 알아가며<br>함께하는 내일을 약속하게 되었습니다.<br><br>저희의 새로운 시작에 함께하시어<br>따뜻한 축복을 나누어 주시면 감사하겠습니다.</p>
+    <div class="family"><p><span data-i18n="groomParents">박성주 · 엄상희</span><span data-i18n="sonOf">의 아들 </span><strong data-groom>박형일</strong></p><p><span data-i18n="brideParents">시라하시 히로미츠 · 시라하시 나오미</span><span data-i18n="daughterOf">의 딸 </span><strong data-bride>시라하시 아야카</strong></p></div>
+  </section>
+
+  <section class="section gallery" id="gallery">
+    <span class="section__label">02 / GALLERY</span><h2 data-i18n="galleryTitle">우리의 사진</h2><p class="subtitle" data-i18n="galleryDescription">함께한 순간들을 담았습니다.</p>
+    <div class="gallery__viewer" tabindex="0" aria-label="사진 갤러리">
+      <div class="gallery__window">
+        <div class="gallery__track">
+          <button type="button" class="gallery__slide" data-gallery-index="0"><img src="assets/images/wedding-01.svg" alt="갤러리 A 사진 샘플" width="1200" height="900"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="1"><img src="assets/images/wedding-02.svg" alt="갤러리 B 사진 샘플" width="1200" height="900"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="2"><img src="assets/images/memory-01.svg" alt="갤러리 C 사진 샘플" width="1200" height="900"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="3"><img src="assets/images/memory-02.svg" alt="갤러리 D 사진 샘플" width="1200" height="900"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="4"><img src="assets/images/memory-03.svg" alt="갤러리 E 사진 샘플" width="1200" height="900"></button>
+        </div>
+      </div>
+      <button type="button" class="gallery__arrow gallery__arrow--prev" aria-label="이전 사진">‹</button>
+      <button type="button" class="gallery__arrow gallery__arrow--next" aria-label="다음 사진">›</button>
+    </div>
+    <p class="gallery__caption"><span class="gallery__name">GALLERY A</span><span class="gallery__count">1 / 5</span></p>
+    <div class="gallery__thumbnails" aria-label="전체 사진 목록">
+      <button type="button" class="gallery__thumbnail is-active" data-gallery-index="0" aria-current="true"><img src="assets/images/wedding-01.svg" alt="갤러리 A 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="1"><img src="assets/images/wedding-02.svg" alt="갤러리 B 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="2"><img src="assets/images/memory-01.svg" alt="갤러리 C 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="3"><img src="assets/images/memory-02.svg" alt="갤러리 D 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="4"><img src="assets/images/memory-03.svg" alt="갤러리 E 썸네일"></button>
+    </div>
+  </section>
+
+  <section class="section schedule" id="schedule">
+    <span class="section__label">03 / THE DAY</span><h2 data-i18n="scheduleTitle">우리의 결혼식</h2><p class="subtitle" id="schedule-date"></p>
+    <div class="calendar" aria-label="예식 날짜 달력"><div class="calendar__header"><span id="calendar-month"></span><span>♥</span></div><div class="calendar__grid" id="calendar-grid"></div></div>
+    <p class="countdown" id="countdown"></p>
+  </section>
+
+  <section class="section location" id="location">
+    <span class="section__label">04 / LOCATION</span><h2 data-i18n="locationTitle">오시는 길</h2><p class="location__venue" id="venue"></p><p class="subtitle" id="address"></p>
+    <div class="location__art" aria-hidden="true"><span>✳</span>SEE YOU THERE</div>
+    <div class="buttons"><a class="button button--filled" id="map-link" target="_blank" rel="noopener noreferrer"><span data-i18n="openMap">지도 열기</span> ↗</a><button class="button" id="copy-address" type="button"><span data-i18n="copyAddress">주소 복사</span> ⧉</button></div>
+    <div class="transport"><div><strong data-i18n="busLabel">버스</strong><span id="bus"></span></div><div><strong data-i18n="parkingLabel">주차</strong><span id="parking"></span></div></div>
+  </section>
+
+  <section class="section guestbook" id="guestbook">
+    <span class="section__label">05 / GUESTBOOK</span><h2 data-i18n="guestbookTitle">방명록</h2><p class="subtitle" data-i18n="guestbookDescription">두 사람에게 따뜻한 축하 메시지를 남겨주세요.</p>
+    <form class="guestbook__form" id="guestbook-form">
+      <label><span data-i18n="guestName">이름</span><input id="guest-name" name="name" type="text" maxlength="20" required autocomplete="name" data-i18n-placeholder="guestNamePlaceholder" placeholder="이름을 입력해 주세요"></label>
+      <label><span data-i18n="guestMessage">메시지</span><textarea id="guest-message" name="message" maxlength="300" required rows="4" data-i18n-placeholder="guestMessagePlaceholder" placeholder="축하 메시지를 입력해 주세요"></textarea></label>
+      <label class="guestbook__honeypot" aria-hidden="true">Website<input name="website" type="text" tabindex="-1" autocomplete="off"></label>
+      <button class="button button--filled guestbook__submit" type="submit" data-i18n="guestSubmit">메시지 남기기</button>
+      <p class="guestbook__status" id="guestbook-status" role="status" aria-live="polite"></p>
+    </form>
+    <div class="guestbook__list" id="guestbook-list" aria-live="polite"></div>
+    <button class="button guestbook__more" id="guestbook-more" type="button" data-i18n="guestMore" hidden>더 보기</button>
+  </section>
+
+  <section class="section accounts" id="accounts" hidden><span class="section__label">06 / HEARTS</span><h2 data-i18n="accountsTitle">마음 전하실 곳</h2><p class="subtitle" data-i18n="accountsDescription">멀리서도 마음을 전해주시는 분들께 감사드립니다.</p><div id="account-list"></div></section>
+
+  <footer class="footer"><p class="eyebrow">WITH LOVE AND GRATITUDE</p><p class="footer__names"><span data-groom>박형일</span> &amp; <span data-bride>시라하시 아야카</span></p><button class="button button--footer" id="share" type="button"><span data-i18n="share">청첩장 공유하기</span> ↗</button><small>Thank you for being part of our story.</small></footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
