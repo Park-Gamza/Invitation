@@ -20,17 +20,24 @@
   <link rel="alternate" hreflang="ja" href="https://park-gamza.github.io/Invitation/ja/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=DM+Sans:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/main.js" defer></script>
 </head>
 <body>
 <main>
   <header class="hero">
-    <div class="hero__top"><span>WEDDING INVITATION</span><div class="hero__controls"><span id="year">2026</span><div class="language-switch" role="group" aria-label="언어 선택"><button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div></div></div>
-    <div class="hero__art" aria-hidden="true"><div class="sun"></div><div class="arch"></div><div class="hill"></div><span class="flower flower--a">✳</span><span class="flower flower--b">✳</span><span class="flower flower--c">✳</span></div>
+    <div class="hero__slideshow" aria-hidden="true"><span class="hero__photo hero__photo--one"></span><span class="hero__photo hero__photo--two"></span></div>
+    <div class="hero__top"><div class="hero__controls"><div class="language-switch" role="group" aria-label="언어 선택"><button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div></div></div>
+    <svg class="hero__curved-text" viewBox="0 0 520 900" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <path id="wedding-curve" d="M 232 76 C 400 57, 504 178, 466 382" />
+        <path id="invitation-curve" d="M 45 390 C 18 580, 126 750, 320 798" />
+      </defs>
+      <text class="hero__curve-word hero__curve-word--wedding" textLength="345" lengthAdjust="spacing"><textPath href="#wedding-curve" startOffset="1%">WEDDING</textPath></text>
+      <text class="hero__curve-word hero__curve-word--invitation" textLength="405" lengthAdjust="spacing"><textPath href="#invitation-curve" startOffset="1%">INVITATION</textPath></text>
+    </svg>
     <div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" id="hero-date">2026. 11. 29. SUNDAY</p><p id="hero-place">오후 12시 · 셀레네하우스웨딩 청주점</p></div>
-    <a class="scroll" href="#invitation"><span data-i18n="scroll">SCROLL</span> <span aria-hidden="true">↓</span></a>
   </header>
 
   <section class="section invitation" id="invitation">
@@ -38,6 +45,7 @@
     <h2 data-i18n-html="invitationTitle">서로의 하루에<br>가장 다정한 사람이 되겠습니다.</h2>
     <p class="invitation__message" data-i18n-html="invitationMessage">계절이 바뀌는 동안 서로를 알아가며<br>함께하는 내일을 약속하게 되었습니다.<br><br>저희의 새로운 시작에 함께하시어<br>따뜻한 축복을 나누어 주시면 감사하겠습니다.</p>
     <div class="family"><p><span data-i18n="groomParents">박성주 · 엄상희</span><span data-i18n="sonOf">의 아들 </span><strong data-groom>박형일</strong></p><p><span data-i18n="brideParents">시라하시 히로미츠 · 시라하시 나오미</span><span data-i18n="daughterOf">의 딸 </span><strong data-bride>시라하시 아야카</strong></p></div>
+    <div class="profiles" id="profiles" hidden></div>
   </section>
 
   <section class="section gallery" id="gallery">
@@ -45,23 +53,25 @@
     <div class="gallery__viewer" tabindex="0" aria-label="사진 갤러리">
       <div class="gallery__window">
         <div class="gallery__track">
-          <button type="button" class="gallery__slide" data-gallery-index="0"><img src="assets/images/wedding-01.svg" alt="갤러리 A 사진 샘플" width="1200" height="900"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="1"><img src="assets/images/wedding-02.svg" alt="갤러리 B 사진 샘플" width="1200" height="900"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="2"><img src="assets/images/memory-01.svg" alt="갤러리 C 사진 샘플" width="1200" height="900"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="3"><img src="assets/images/memory-02.svg" alt="갤러리 D 사진 샘플" width="1200" height="900"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="4"><img src="assets/images/memory-03.svg" alt="갤러리 E 사진 샘플" width="1200" height="900"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="0"><img src="assets/images/gallary-1.jpg" alt="갤러리 사진 1"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="1"><img src="assets/images/gallary-2.jpg" alt="갤러리 사진 2"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="2"><img src="assets/images/gallary-3.jpg" alt="갤러리 사진 3"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="3"><img src="assets/images/gallary-4.jpg" alt="갤러리 사진 4"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="4"><img src="assets/images/gallary-5.jpg" alt="갤러리 사진 5"></button>
+          <button type="button" class="gallery__slide" data-gallery-index="5"><img src="assets/images/gallary-6.jpg" alt="갤러리 사진 6"></button>
         </div>
       </div>
       <button type="button" class="gallery__arrow gallery__arrow--prev" aria-label="이전 사진">‹</button>
       <button type="button" class="gallery__arrow gallery__arrow--next" aria-label="다음 사진">›</button>
     </div>
-    <p class="gallery__caption"><span class="gallery__name">GALLERY A</span><span class="gallery__count">1 / 5</span></p>
+    <p class="gallery__caption"><span class="gallery__count">1 / 6</span></p>
     <div class="gallery__thumbnails" aria-label="전체 사진 목록">
-      <button type="button" class="gallery__thumbnail is-active" data-gallery-index="0" aria-current="true"><img src="assets/images/wedding-01.svg" alt="갤러리 A 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="1"><img src="assets/images/wedding-02.svg" alt="갤러리 B 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="2"><img src="assets/images/memory-01.svg" alt="갤러리 C 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="3"><img src="assets/images/memory-02.svg" alt="갤러리 D 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="4"><img src="assets/images/memory-03.svg" alt="갤러리 E 썸네일"></button>
+      <button type="button" class="gallery__thumbnail is-active" data-gallery-index="0" aria-current="true"><img src="assets/images/gallary-1.jpg" alt="갤러리 사진 1 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="1"><img src="assets/images/gallary-2.jpg" alt="갤러리 사진 2 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="2"><img src="assets/images/gallary-3.jpg" alt="갤러리 사진 3 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="3"><img src="assets/images/gallary-4.jpg" alt="갤러리 사진 4 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="4"><img src="assets/images/gallary-5.jpg" alt="갤러리 사진 5 썸네일"></button>
+      <button type="button" class="gallery__thumbnail" data-gallery-index="5"><img src="assets/images/gallary-6.jpg" alt="갤러리 사진 6 썸네일"></button>
     </div>
   </section>
 
@@ -73,7 +83,7 @@
 
   <section class="section location" id="location">
     <span class="section__label">04 / LOCATION</span><h2 data-i18n="locationTitle">오시는 길</h2><p class="location__venue" id="venue"></p><p class="subtitle" id="address"></p>
-    <div class="location__art" aria-hidden="true"><span>✳</span>SEE YOU THERE</div>
+    <a class="location__art" id="location-map-link" target="_blank" rel="noopener noreferrer"><img id="location-map-image" src="assets/images/location-map.svg" alt="셀레네 하우스웨딩 청주점 주변 지도"></a>
     <div class="buttons"><a class="button button--filled" id="map-link" target="_blank" rel="noopener noreferrer"><span data-i18n="openMap">지도 열기</span> ↗</a><button class="button" id="copy-address" type="button"><span data-i18n="copyAddress">주소 복사</span> ⧉</button></div>
     <div class="transport"><div><strong data-i18n="busLabel">버스</strong><span id="bus"></span></div><div><strong data-i18n="parkingLabel">주차</strong><span id="parking"></span></div></div>
   </section>
@@ -91,6 +101,13 @@
     <button class="button guestbook__more" id="guestbook-more" type="button" data-i18n="guestMore" hidden>더 보기</button>
   </section>
 
+  <section class="section departure-guide" id="departure-guide" hidden>
+    <span class="section__label">06 / DEPARTURE</span>
+    <span class="departure-guide__icon" aria-hidden="true">✈</span>
+    <h2 data-i18n="departureTitle">当日ご帰国される皆さまへ</h2>
+    <p class="departure-guide__message" data-i18n-html="departureMessage">当日ご帰国予定の方は、<br><strong>13時50分までに式場入口</strong>へお集まりください。<br>空港までご案内いたします。</p>
+  </section>
+
   <section class="section accounts" id="accounts" hidden>
     <span class="section__label">06 / HEARTS</span>
     <h2 data-i18n="accountsTitle">마음 전하실 곳</h2>
@@ -100,6 +117,12 @@
 
   <footer class="footer"><p class="eyebrow">WITH LOVE AND GRATITUDE</p><p class="footer__names"><span data-groom>박형일</span> &amp; <span data-bride>시라하시 아야카</span></p><button class="button button--footer" id="share" type="button"><span data-i18n="share">청첩장 공유하기</span> ↗</button><small>Thank you for being part of our story.</small></footer>
 </main>
+<div class="lightbox" id="gallery-lightbox" role="dialog" aria-modal="true" hidden>
+  <button class="lightbox__close" id="lightbox-close" type="button">×</button>
+  <button class="lightbox__arrow lightbox__arrow--prev" id="lightbox-prev" type="button">‹</button>
+  <figure class="lightbox__figure"><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-count"></figcaption></figure>
+  <button class="lightbox__arrow lightbox__arrow--next" id="lightbox-next" type="button">›</button>
+</div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </body>
 </html>
