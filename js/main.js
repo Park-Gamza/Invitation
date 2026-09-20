@@ -17,6 +17,7 @@ const wedding = {
 
 // Deploy the Apps Script project as a web app, then enter the URL ending in /exec.
 const guestbookEndpoint = "https://script.google.com/macros/s/AKfycbzwlfJ6y27snZXAvsvGnh9nUn2Pi3lmznSTXwOPx-aVQo2THe8rK8HsmnZyAWdJoLFz/exec";
+const siteUrl = "https://park-gamza.github.io/Invitation/";
 
 const translations = {
   ko: {
@@ -57,6 +58,10 @@ let guestbookMessages = [];
 let guestbookVisibleCount = 5;
 
 function setText(selector, value) { $(selector).textContent = value; }
+
+function getShareUrl() {
+  return language === "ja" ? new URL("ja/", siteUrl).href : siteUrl;
+}
 
 function toast(message) {
   const element = $("#toast");
@@ -429,10 +434,11 @@ function init() {
   $("#copy-address").addEventListener("click", () => copy(wedding.address, translations[language].copiedAddress));
   $("#share").addEventListener("click", async () => {
     const t = translations[language];
+    const shareUrl = getShareUrl();
     if (navigator.share) {
-      try { await navigator.share({ title: document.title, text: `${wedding.groom[language]} ♥ ${wedding.bride[language]} ${t.shareText}`, url: location.href }); }
+      try { await navigator.share({ title: document.title, text: `${wedding.groom[language]} ♥ ${wedding.bride[language]} ${t.shareText}`, url: shareUrl }); }
       catch (error) { if (error.name !== "AbortError") toast(t.shareFailed); }
-    } else { copy(location.href, t.copiedLink); }
+    } else { copy(shareUrl, t.copiedLink); }
   });
   renderLanguage();
   loadGuestbook();
