@@ -11,7 +11,18 @@ const wedding = {
   },
   parking: { ko: "웨딩홀 주차장 이용", ja: "式場の駐車場をご利用ください" },
   accounts: [
-    // Example: { label: { ko: "Groom's side", ja: "Groom's side" }, bank: "Bank name", number: "000-0000-0000", owner: "Account holder" },
+    {
+      label: { ko: "신랑 아버지" },
+      bank: { ko: "농협" },
+      number: "315-12-174695",
+      owner: { ko: "박성주" },
+    },
+    {
+      label: { ko: "신랑 어머니" },
+      bank: { ko: "농협" },
+      number: "403018-52-143435",
+      owner: { ko: "엄상희" },
+    },
   ],
 };
 
@@ -131,25 +142,33 @@ function renderCountdown() {
 }
 
 function renderAccounts() {
-  if (!wedding.accounts.length) return;
-  $("#accounts").hidden = false;
-  $("#account-list").replaceChildren();
+  const section = $("#accounts");
+  const list = $("#account-list");
+  list.replaceChildren();
+  if (language !== "ko" || !wedding.accounts.length) {
+    section.hidden = true;
+    return;
+  }
+  section.hidden = false;
   wedding.accounts.forEach(({ label, bank, number, owner }) => {
-    const details = document.createElement("details");
-    details.className = "account";
-    const summary = document.createElement("summary");
-    summary.textContent = typeof label === "string" ? label : label[language];
+    const account = document.createElement("div");
+    account.className = "account";
+    const heading = document.createElement("strong");
+    heading.className = "account__label";
+    heading.textContent = typeof label === "string" ? label : label[language];
     const body = document.createElement("div");
     body.className = "account__body";
     const info = document.createElement("p");
-    info.textContent = `${bank} ${number} · ${owner}`;
+    const localizedBank = typeof bank === "string" ? bank : bank[language];
+    const localizedOwner = typeof owner === "string" ? owner : owner[language];
+    info.textContent = `${localizedBank} ${number} · ${localizedOwner}`;
     const button = document.createElement("button");
     button.type = "button";
     button.textContent = translations[language].accountCopy;
-    button.addEventListener("click", () => copy(number, translations[language].copiedAccount));
+    button.addEventListener("click", () => copy(number.replace(/\D/g, ""), translations[language].copiedAccount));
     body.append(info, button);
-    details.append(summary, body);
-    $("#account-list").append(details);
+    account.append(heading, body);
+    list.append(account);
   });
 }
 

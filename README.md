@@ -57,6 +57,8 @@ Then open `http://localhost:8000` in a browser.
 
 Edit the wedding details and localized text in `js/main.js`. Add gallery photos to `assets/images/` and update their paths in `index.html`.
 
+The bank accounts for the groom's father and mother are configured in the `wedding.accounts` array in `js/main.js`. Account numbers may include hyphens for readability, while the copy action removes all nonnumeric characters. The account section is always visible on the Korean page and remains hidden on the Japanese page.
+
 To enable the guestbook, add `google-apps-script/Code.gs` to an Apps Script project linked to a Google Sheet and deploy it as a web app. Set the generated URL ending in `/exec` as `guestbookEndpoint` in `js/main.js`.
 
 ## Live Site
