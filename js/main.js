@@ -18,6 +18,7 @@ const wedding = {
 // Deploy the Apps Script project as a web app, then enter the URL ending in /exec.
 const guestbookEndpoint = "https://script.google.com/macros/s/AKfycbzwlfJ6y27snZXAvsvGnh9nUn2Pi3lmznSTXwOPx-aVQo2THe8rK8HsmnZyAWdJoLFz/exec";
 const siteUrl = "https://park-gamza.github.io/Invitation/";
+const shareVersion = "20260920";
 
 const translations = {
   ko: {
@@ -60,7 +61,9 @@ let guestbookVisibleCount = 5;
 function setText(selector, value) { $(selector).textContent = value; }
 
 function getShareUrl() {
-  return language === "ja" ? new URL("ja/", siteUrl).href : siteUrl;
+  const url = language === "ja" ? new URL("ja/", siteUrl) : new URL(siteUrl);
+  url.searchParams.set("v", shareVersion);
+  return url.href;
 }
 
 function toast(message) {
