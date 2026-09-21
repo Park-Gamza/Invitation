@@ -109,6 +109,23 @@ function toast(message) {
   toastTimer = setTimeout(() => element.classList.remove("is-visible"), 2500);
 }
 
+function initHero() {
+  const hero = $(".hero");
+  const loader = $(".hero__loading");
+  const sources = ["assets/images/screen-1.jpg", "assets/images/screen-2.jpg"];
+  const preload = (source) => new Promise((resolve) => {
+    const image = new Image();
+    image.onload = resolve;
+    image.onerror = resolve;
+    image.src = source;
+  });
+
+  Promise.all(sources.map(preload)).then(() => {
+    requestAnimationFrame(() => hero.classList.add("is-ready"));
+    setTimeout(() => { loader.hidden = true; }, 700);
+  });
+}
+
 async function copy(value, message) {
   try {
     if (navigator.clipboard?.writeText) {
@@ -487,9 +504,61 @@ function moveLightbox(direction) {
   renderLightbox();
 }
 
-function initGallery() {
+async function discoverGalleryImages() {
+  const sources = [];
+  for (let number = 1; number <= 100; number += 1) {
+    const source = `assets/images/gallary-${number}.jpg`;
+    const exists = await new Promise((resolve) => {
+      const image = new Image();
+      image.onload = () => resolve(true);
+      image.onerror = () => resolve(false);
+      image.src = source;
+    });
+    if (!exists) break;
+    sources.push(source);
+  }
+  return sources;
+}
+
+function buildGallery(sources) {
+  const track = $(".gallery__track");
+  const thumbnails = $(".gallery__thumbnails");
+  sources.forEach((source, index) => {
+    const slide = document.createElement("button");
+    slide.type = "button";
+    slide.className = "gallery__slide";
+    slide.dataset.galleryIndex = index;
+    const image = document.createElement("img");
+    image.src = source;
+    image.alt = `갤러리 사진 ${index + 1}`;
+    image.decoding = "async";
+    slide.append(image);
+    track.append(slide);
+
+    const thumbnail = document.createElement("button");
+    thumbnail.type = "button";
+    thumbnail.className = "gallery__thumbnail";
+    thumbnail.dataset.galleryIndex = index;
+    const thumbnailImage = document.createElement("img");
+    thumbnailImage.src = source;
+    thumbnailImage.alt = `갤러리 사진 ${index + 1} 썸네일`;
+    thumbnailImage.loading = "lazy";
+    thumbnail.append(thumbnailImage);
+    thumbnails.append(thumbnail);
+  });
+}
+
+async function initGallery() {
   const viewer = $(".gallery__viewer");
   const track = $(".gallery__track");
+  const sources = await discoverGalleryImages();
+  if (!sources.length) {
+    viewer.hidden = true;
+    $(".gallery__caption").hidden = true;
+    $(".gallery__thumbnails").hidden = true;
+    return;
+  }
+  buildGallery(sources);
   const originalSlides = [...track.querySelectorAll(".gallery__slide")];
   const firstClone = originalSlides[0].cloneNode(true);
   const lastClone = originalSlides[originalSlides.length - 1].cloneNode(true);
@@ -594,9 +663,10 @@ function renderLanguage() {
   renderAccounts();
 }
 
-function init() {
+async function init() {
   if (Number.isNaN(date.getTime())) { console.error("The wedding date format is invalid."); return; }
-  initGallery();
+  initHero();
+  await initGallery();
   $("#guestbook-form").addEventListener("submit", submitGuestbook);
   $("#guestbook-more").addEventListener("click", () => { guestbookVisibleCount += 5; renderGuestbook(); });
   $("#map-link").href = wedding.mapUrl || `https://map.naver.com/p/search/${encodeURIComponent(wedding.address)}`;

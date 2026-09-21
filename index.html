@@ -21,18 +21,19 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=DM+Sans:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260921">
-  <script src="js/main.js" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=20260921-4">
+  <script src="js/main.js?v=20260921-4" defer></script>
 </head>
 <body>
 <main>
   <header class="hero">
+    <div class="hero__loading" role="status" aria-live="polite"><span class="hero__spinner" aria-hidden="true"></span><span>LOADING</span></div>
     <div class="hero__slideshow" aria-hidden="true"><span class="hero__photo hero__photo--one"></span><span class="hero__photo hero__photo--two"></span></div>
     <div class="hero__top"><div class="hero__controls"><div class="language-switch" role="group" aria-label="언어 선택"><button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div></div></div>
     <svg class="hero__curved-text" viewBox="0 0 520 900" preserveAspectRatio="none" aria-hidden="true">
       <defs>
-        <path id="wedding-curve" d="M 232 76 C 400 57, 504 178, 466 382" />
-        <path id="invitation-curve" d="M 45 390 C 18 580, 126 750, 320 798" />
+        <path id="wedding-curve" d="M 245 125 C 405 105, 505 245, 460 440" />
+        <path id="invitation-curve" d="M 42 455 C 14 650, 128 810, 315 845" />
       </defs>
       <text class="hero__curve-word hero__curve-word--wedding" textLength="345" lengthAdjust="spacing"><textPath href="#wedding-curve" startOffset="1%">WEDDING</textPath></text>
       <text class="hero__curve-word hero__curve-word--invitation" textLength="405" lengthAdjust="spacing"><textPath href="#invitation-curve" startOffset="1%">INVITATION</textPath></text>
@@ -52,27 +53,13 @@
     <span class="section__label">02 / GALLERY</span><h2 data-i18n="galleryTitle">우리의 사진</h2><p class="subtitle" data-i18n="galleryDescription">함께한 순간들을 담았습니다.</p>
     <div class="gallery__viewer" tabindex="0" aria-label="사진 갤러리">
       <div class="gallery__window">
-        <div class="gallery__track">
-          <button type="button" class="gallery__slide" data-gallery-index="0"><img src="assets/images/gallary-1.jpg" alt="갤러리 사진 1"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="1"><img src="assets/images/gallary-2.jpg" alt="갤러리 사진 2"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="2"><img src="assets/images/gallary-3.jpg" alt="갤러리 사진 3"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="3"><img src="assets/images/gallary-4.jpg" alt="갤러리 사진 4"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="4"><img src="assets/images/gallary-5.jpg" alt="갤러리 사진 5"></button>
-          <button type="button" class="gallery__slide" data-gallery-index="5"><img src="assets/images/gallary-6.jpg" alt="갤러리 사진 6"></button>
-        </div>
+        <div class="gallery__track"></div>
       </div>
       <button type="button" class="gallery__arrow gallery__arrow--prev" aria-label="이전 사진">‹</button>
       <button type="button" class="gallery__arrow gallery__arrow--next" aria-label="다음 사진">›</button>
     </div>
-    <p class="gallery__caption"><span class="gallery__count">1 / 6</span></p>
-    <div class="gallery__thumbnails" aria-label="전체 사진 목록">
-      <button type="button" class="gallery__thumbnail is-active" data-gallery-index="0" aria-current="true"><img src="assets/images/gallary-1.jpg" alt="갤러리 사진 1 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="1"><img src="assets/images/gallary-2.jpg" alt="갤러리 사진 2 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="2"><img src="assets/images/gallary-3.jpg" alt="갤러리 사진 3 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="3"><img src="assets/images/gallary-4.jpg" alt="갤러리 사진 4 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="4"><img src="assets/images/gallary-5.jpg" alt="갤러리 사진 5 썸네일"></button>
-      <button type="button" class="gallery__thumbnail" data-gallery-index="5"><img src="assets/images/gallary-6.jpg" alt="갤러리 사진 6 썸네일"></button>
-    </div>
+    <p class="gallery__caption"><span class="gallery__count"></span></p>
+    <div class="gallery__thumbnails" aria-label="전체 사진 목록"></div>
   </section>
 
   <section class="section schedule" id="schedule">
