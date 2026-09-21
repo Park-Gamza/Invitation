@@ -3,7 +3,7 @@ const wedding = {
   bride: { ko: "아야카", ja: "Ayaka" },
   date: "2026-11-29T12:00:00+09:00",
   venue: { ko: "셀레네 하우스웨딩 청주점", ja: "セレネハウスウェディング清州店" },
-  address: "충청북도 청주시 흥덕구 직지대로693번길 21 셀레네하우스웨딩 청주",
+  address: "충청북도 청주시 흥덕구 직지대로693번길 21",
   mapUrl: "https://naver.me/5jJaDZgt",
   bus: {
     ko: "고인쇄박물관 정류장 하차\n버스: 831 · 823 · 862-2 · 863-1 · 747 · 745",
@@ -566,7 +566,6 @@ function renderGalleryLanguage() {
 function renderLanguage() {
   const t = translations[language];
   const locale = language === "ko" ? "ko-KR" : "ja-JP";
-  const time = new Intl.DateTimeFormat(locale, { hour: "numeric", minute: "2-digit", hour12: language === "ko", timeZone }).format(date);
   const dateText = new Intl.DateTimeFormat(locale, { year: "numeric", month: "long", day: "numeric", weekday: "long", hour: "numeric", minute: "2-digit", hour12: language === "ko", timeZone }).format(date);
   document.documentElement.lang = language;
   document.title = `${wedding.groom[language]} & ${wedding.bride[language]} | ${t.title}`;
@@ -578,8 +577,8 @@ function renderLanguage() {
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => { node.placeholder = t[node.dataset.i18nPlaceholder]; });
   document.querySelectorAll("[data-groom]").forEach((node) => { node.textContent = wedding.groom[language]; });
   document.querySelectorAll("[data-bride]").forEach((node) => { node.textContent = wedding.bride[language]; });
-  setText("#hero-date", `${eventYear}. ${String(eventMonth).padStart(2, "0")}. ${String(eventDay).padStart(2, "0")}. ${new Intl.DateTimeFormat("en", { weekday: "long", timeZone }).format(date).toUpperCase()}`);
-  setText("#hero-place", `${time} · ${wedding.venue[language]}`);
+  setText("#hero-date", language === "ko" ? `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(일) 오후12:00` : `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(日) 12:00`);
+  setText("#hero-place", wedding.venue[language]);
   setText("#schedule-date", dateText);
   setText("#venue", wedding.venue[language]);
   setText("#address", wedding.address);
