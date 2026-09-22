@@ -21,28 +21,23 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant:wght@300&family=DM+Sans:wght@400;500;600&family=Gowun+Batang:wght@400;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css?v=20260921-4">
-  <script src="js/main.js?v=20260921-4" defer></script>
+  <link rel="stylesheet" href="css/style.css?v=20260922-13">
+  <script src="js/main.js?v=20260922-8" defer></script>
 </head>
 <body>
 <main>
   <header class="hero">
     <div class="hero__loading" role="status" aria-live="polite"><span class="hero__spinner" aria-hidden="true"></span><span>LOADING</span></div>
-    <div class="hero__slideshow" aria-hidden="true"><span class="hero__photo hero__photo--one"></span><span class="hero__photo hero__photo--two"></span></div>
+    <div class="hero__slideshow">
+      <div class="hero__photo hero__photo--one"><div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" data-hero-date>2026.11.29(일) 오후12:00</p><p data-hero-place>셀레네 하우스웨딩 청주점</p></div></div>
+      <div class="hero__photo hero__photo--two"><div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" data-hero-date>2026.11.29(일) 오후12:00</p><p data-hero-place>셀레네 하우스웨딩 청주점</p></div></div>
+      <div class="hero__photo hero__photo--three"><div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" data-hero-date>2026.11.29(일) 오후12:00</p><p data-hero-place>셀레네 하우스웨딩 청주점</p></div></div>
+    </div>
     <div class="hero__top"><div class="hero__controls"><div class="language-switch" role="group" aria-label="언어 선택"><button type="button" data-lang="ko" aria-pressed="true">한국어</button><button type="button" data-lang="ja" aria-pressed="false">日本語</button></div></div></div>
-    <svg class="hero__curved-text" viewBox="0 0 520 900" preserveAspectRatio="none" aria-hidden="true">
-      <defs>
-        <path id="wedding-curve" d="M 245 125 C 405 105, 505 245, 460 440" />
-        <path id="invitation-curve" d="M 42 455 C 14 650, 128 810, 315 845" />
-      </defs>
-      <text class="hero__curve-word hero__curve-word--wedding" textLength="345" lengthAdjust="spacing"><textPath href="#wedding-curve" startOffset="1%">WEDDING</textPath></text>
-      <text class="hero__curve-word hero__curve-word--invitation" textLength="405" lengthAdjust="spacing"><textPath href="#invitation-curve" startOffset="1%">INVITATION</textPath></text>
-    </svg>
-    <div class="hero__copy"><p class="eyebrow">Together, from this day forward</p><h1><span data-groom>박형일</span> <em>&amp;</em> <span data-bride>시라하시 아야카</span></h1><p class="hero__date" id="hero-date">2026.11.29(일) 오후12:00</p><p id="hero-place">셀레네 하우스웨딩 청주점</p></div>
   </header>
 
   <section class="section invitation" id="invitation">
-    <span class="section__label">01 / INVITATION</span><span class="ornament" aria-hidden="true">✳</span>
+    <span class="section__label">01 / INVITATION</span>
     <h2 data-i18n-html="invitationTitle">서로의 하루에<br>가장 다정한 사람이 되겠습니다.</h2>
     <p class="invitation__message" data-i18n-html="invitationMessage">계절이 바뀌는 동안 서로를 알아가며<br>함께하는 내일을 약속하게 되었습니다.<br><br>저희의 새로운 시작에 함께하시어<br>따뜻한 축복을 나누어 주시면 감사하겠습니다.</p>
     <div class="family"><p><span data-i18n="groomParents">박성주 · 엄상희</span><span data-i18n="sonOf">의 아들 </span><strong data-groom>박형일</strong></p><p><span data-i18n="brideParents">시라하시 히로미츠 · 시라하시 나오미</span><span data-i18n="daughterOf">의 딸 </span><strong data-bride>시라하시 아야카</strong></p></div>
@@ -66,6 +61,7 @@
     <span class="section__label">03 / THE DAY</span><h2 data-i18n="scheduleTitle">우리의 결혼식</h2><p class="subtitle" id="schedule-date"></p>
     <div class="calendar" aria-label="예식 날짜 달력"><div class="calendar__header"><span id="calendar-month"></span><span>♥</span></div><div class="calendar__grid" id="calendar-grid"></div></div>
     <p class="countdown" id="countdown"></p>
+    <p class="schedule__note" id="schedule-note"></p>
   </section>
 
   <section class="section location" id="location">
@@ -108,6 +104,7 @@
   <button class="lightbox__close" id="lightbox-close" type="button">×</button>
   <button class="lightbox__arrow lightbox__arrow--prev" id="lightbox-prev" type="button">‹</button>
   <figure class="lightbox__figure"><img id="lightbox-image" src="" alt=""><figcaption id="lightbox-count"></figcaption></figure>
+  <div class="lightbox__zoom-controls"><button id="lightbox-zoom-out" type="button">−</button><button id="lightbox-zoom-reset" type="button">1×</button><button id="lightbox-zoom-in" type="button">＋</button></div>
   <button class="lightbox__arrow lightbox__arrow--next" id="lightbox-next" type="button">›</button>
 </div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>

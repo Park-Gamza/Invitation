@@ -2,7 +2,7 @@ const wedding = {
   groom: { ko: "형일", ja: "HyeongIl" },
   bride: { ko: "아야카", ja: "Ayaka" },
   date: "2026-11-29T12:00:00+09:00",
-  venue: { ko: "셀레네 하우스웨딩 청주점", ja: "セレネハウスウェディング清州店" },
+  venue: { ko: "셀레네 하우스웨딩 청주점", ja: "SeleneHouseWedding 清州店" },
   address: "충청북도 청주시 흥덕구 직지대로693번길 21",
   mapUrl: "https://naver.me/5jJaDZgt",
   bus: {
@@ -14,11 +14,11 @@ const wedding = {
     {
       name: "HyeongIl",
       role: "GROOM",
-      image: "assets/images/profile-hyon.jpg?v=20260920-1",
+      image: "assets/images/profile-hyon.jpg?v=20260922-1",
       birthDate: "1995-02-28",
       hometown: "韓国・報恩郡",
-      hobby: "バイク・ゲーム・オパンチュウサギ",
-      message: "メッセージを入力してください。",
+      hobby: "バイク・ゲーム・おぱんちゅうさぎ",
+      message: "皆様にお会いできることが\n今から楽しみです！\n\n美味しい料理と飲み物を\nご用意してお待ちしています",
     },
     {
       name: "Ayaka",
@@ -26,8 +26,8 @@ const wedding = {
       image: "assets/images/profile-aya.jpg?v=20260920-1",
       birthDate: "1995-09-30",
       hometown: "日本・東京都",
-      hobby: "旅行・カフェ巡り・オパンチュウサギ",
-      message: "メッセージを入力してください。",
+      hobby: "旅行・カフェ巡り・おぱんちゅうさぎ",
+      message: "いつも支えてくださり\n本当にありがとうございます！\n\n遠方からお越しいただき、\n大変嬉しく思います。\nお会いできることを楽しみにしてます！\n\nこれからも夫婦共々、\nどうぞよろしくお願いいたします。",
     },
   ],
   accounts: [
@@ -58,7 +58,7 @@ const translations = {
     invitationMessage: "계절이 바뀌는 동안 서로를 알아가며<br>함께하는 내일을 약속하게 되었습니다.<br><br>저희의 새로운 시작에 함께하시어<br>따뜻한 축복을 나누어 주시면 감사하겠습니다.",
     groomParents: "박성주 · 엄상희", sonOf: "의 아들 ", brideParents: "시라하시 히로미츠 · 시라하시 나오미", daughterOf: "의 딸 ",
     galleryTitle: "GALLERY", galleryDescription: "함께한 순간들을 담았습니다.", galleryLabel: "사진 갤러리", photoList: "전체 사진 목록", previousPhoto: "이전 사진", nextPhoto: "다음 사진", closePhoto: "확대 사진 닫기", enlargedPhoto: "확대 사진", samplePhoto: "사진 샘플", thumbnail: "썸네일",
-    scheduleTitle: "SCHEDULE", locationTitle: "ACCESS", openMap: "지도 열기", copyAddress: "주소 복사", busLabel: "버스", parkingLabel: "주차", mapImageAlt: "셀레네 하우스웨딩 청주점 주변 지도",
+    scheduleTitle: "SCHEDULE", scheduleNote: "별도의 식당이 마련되어 있지 않아\n예식이 진행되는 동안에는 식사가 어려운 점\n너른 양해 부탁드립니다.", locationTitle: "ACCESS", openMap: "지도 열기", copyAddress: "주소 복사", busLabel: "버스", parkingLabel: "주차", mapImageAlt: "셀레네 하우스웨딩 청주점 주변 지도",
     guestbookTitle: "GUESTBOOK", guestbookDescription: "두 사람에게 따뜻한 축하 메시지를 남겨주세요.", guestName: "이름", guestMessage: "메시지", guestNamePlaceholder: "이름을 입력해 주세요", guestMessagePlaceholder: "축하 메시지를 입력해 주세요", guestSubmit: "메시지 남기기", guestMore: "더 보기", guestLoading: "메시지를 불러오는 중입니다.", guestEmpty: "첫 번째 축하 메시지를 남겨주세요.", guestSaving: "메시지를 등록하는 중입니다.", guestSaved: "축하 메시지가 등록되었습니다.", guestLoadFailed: "방명록을 불러오지 못했습니다.", guestSaveFailed: "메시지를 등록하지 못했습니다. 잠시 후 다시 시도해 주세요.", guestSetup: "Apps Script 배포 URL을 설정하면 방명록을 사용할 수 있습니다.",
     departureTitle: "당일 귀국하시는 분들께", departureMessage: "당일 귀국 예정인 분들은<br><strong>오후 1시 50분까지 예식장 입구</strong>로 모여주세요.<br>공항까지 안내해 드립니다.",
     accountsTitle: "마음 전하실 곳", accountsDescription: "멀리서도 마음을 전해주시는 분들께 감사드립니다.", share: "청첩장 공유하기",
@@ -70,11 +70,11 @@ const translations = {
     invitationTitle: "お互いの日々に寄り添い<br>優しさを分かち合ってまいります。",
     invitationMessage: "季節を重ねる中でお互いを知り<br>ともに歩む未来を約束しました。<br><br>私たちの新たな門出を<br>あたたかく見守っていただけましたら幸いです。",
     groomParents: "パク・ソンジュ · オム・サンヒ", sonOf: "の息子 ", brideParents: "シラハシ・ヒロミツ · シラハシ・ナオミ", daughterOf: "の娘 ",
-    galleryTitle: "GALLERY", galleryDescription: "ともに過ごした日々の思い出です。", galleryLabel: "写真ギャラリー", photoList: "写真一覧", previousPhoto: "前の写真", nextPhoto: "次の写真", closePhoto: "拡大写真を閉じる", enlargedPhoto: "拡大写真", samplePhoto: "写真サンプル", thumbnail: "サムネイル",
-    scheduleTitle: "SCHEDULE", locationTitle: "ACCESS", openMap: "地図を見る", copyAddress: "住所をコピー", busLabel: "バス", parkingLabel: "駐車場", mapImageAlt: "セレネハウスウェディング清州店の周辺地図",
+    galleryTitle: "GALLERY", galleryDescription: "大切な瞬間", galleryLabel: "写真ギャラリー", photoList: "写真一覧", previousPhoto: "前の写真", nextPhoto: "次の写真", closePhoto: "拡大写真を閉じる", enlargedPhoto: "拡大写真", samplePhoto: "写真サンプル", thumbnail: "サムネイル",
+    scheduleTitle: "SCHEDULE", scheduleNote: "挙式の30分ほど前にお越しいただきますと、\n新郎・新婦と一緒にお写真を撮ったり、\nお話したりするお時間をお楽しみいただけます。", locationTitle: "ACCESS", openMap: "地図を見る", copyAddress: "住所をコピー", busLabel: "バス", parkingLabel: "駐車場", mapImageAlt: "セレネハウスウェディング清州店の周辺地図",
     guestbookTitle: "GUESTBOOK", guestbookDescription: "ふたりへお祝いのメッセージをお寄せください。", guestName: "お名前", guestMessage: "メッセージ", guestNamePlaceholder: "お名前をご入力ください", guestMessagePlaceholder: "お祝いのメッセージをご入力ください", guestSubmit: "メッセージを送る", guestMore: "もっと見る", guestLoading: "メッセージを読み込んでいます。", guestEmpty: "最初のお祝いメッセージをお寄せください。", guestSaving: "メッセージを送信しています。", guestSaved: "メッセージを登録しました。", guestLoadFailed: "ゲストブックを読み込めませんでした。", guestSaveFailed: "メッセージを登録できませんでした。しばらくしてからもう一度お試しください。", guestSetup: "Apps ScriptのデプロイURLを設定するとゲストブックを利用できます。",
     profilePhoto: "プロフィール写真", profileBirthDate: "生年月日", profileHometown: "出身地", profileHobby: "趣味", profileMessage: "メッセージ",
-    departureTitle: "当日ご帰国される皆さまへ", departureMessage: "当日ご帰国予定の方は、<br><strong>13時50分までに式場入口</strong>へお集まりください。<br>空港までご案内いたします。",
+    departureTitle: "当日ご帰国される皆さまへ", departureMessage: "当日ご帰国予定の方は、<br><span class=\"departure-guide__nowrap\"><strong>13時50分までに式場入口</strong>へお集まりください。</span><br>空港までご案内いたします。",
     accountsTitle: "ご祝儀のご案内", accountsDescription: "遠方からお祝いくださる皆さまに感謝申し上げます。", share: "招待状を共有",
     calendarLabel: "結婚式の日付のカレンダー", weddingDay: "挙式日", countdownLabel: "結婚式までの残り時間", completed: "お越しいただきありがとうございました。",
     copiedAddress: "住所をコピーしました。", copiedAccount: "口座番号をコピーしました。", copiedLink: "招待状のURLをコピーしました。", copyFailed: "コピーできませんでした。もう一度お試しください。", shareFailed: "共有できませんでした。", accountCopy: "口座番号をコピー", shareText: "結婚式にご招待いたします。", languageLabel: "言語選択",
@@ -90,6 +90,9 @@ let language = new URLSearchParams(location.search).get("lang") === "ja" ? "ja" 
 let galleryIndex = 0;
 let galleryAnimating = false;
 let lightboxLastFocus = null;
+let lightboxScale = 1;
+let lightboxTranslateX = 0;
+let lightboxTranslateY = 0;
 let guestbookMessages = [];
 let guestbookVisibleCount = 5;
 
@@ -112,7 +115,7 @@ function toast(message) {
 function initHero() {
   const hero = $(".hero");
   const loader = $(".hero__loading");
-  const sources = ["assets/images/screen-1.jpg", "assets/images/screen-2.jpg"];
+  const sources = ["assets/images/screen-1.jpg", "assets/images/screen-2.jpg", "assets/images/screen-3-portrait.jpg"];
   const preload = (source) => new Promise((resolve) => {
     const image = new Image();
     image.onload = resolve;
@@ -483,6 +486,35 @@ function renderLightbox() {
   image.src = source.src;
   image.alt = source.alt;
   setText("#lightbox-count", `${galleryIndex + 1} / ${slides.length}`);
+  resetLightboxZoom();
+}
+
+function applyLightboxZoom() {
+  const image = $("#lightbox-image");
+  const maxX = image.clientWidth * (lightboxScale - 1) / 2;
+  const maxY = image.clientHeight * (lightboxScale - 1) / 2;
+  lightboxTranslateX = Math.max(-maxX, Math.min(maxX, lightboxTranslateX));
+  lightboxTranslateY = Math.max(-maxY, Math.min(maxY, lightboxTranslateY));
+  image.style.transform = `translate3d(${lightboxTranslateX}px, ${lightboxTranslateY}px, 0) scale(${lightboxScale})`;
+  $("#lightbox-zoom-reset").textContent = `${lightboxScale.toFixed(lightboxScale % 1 ? 1 : 0)}×`;
+  $("#lightbox-zoom-out").disabled = lightboxScale <= 1;
+  $("#lightbox-zoom-in").disabled = lightboxScale >= 4;
+}
+
+function setLightboxZoom(scale) {
+  lightboxScale = Math.max(1, Math.min(4, scale));
+  if (lightboxScale === 1) {
+    lightboxTranslateX = 0;
+    lightboxTranslateY = 0;
+  }
+  applyLightboxZoom();
+}
+
+function resetLightboxZoom() {
+  lightboxScale = 1;
+  lightboxTranslateX = 0;
+  lightboxTranslateY = 0;
+  applyLightboxZoom();
 }
 
 function openLightbox() {
@@ -571,6 +603,12 @@ async function initGallery() {
   track.append(firstClone);
   let touchStartX = 0;
   let lightboxTouchStartX = 0;
+  let lightboxTouchStartY = 0;
+  let lightboxStartTranslateX = 0;
+  let lightboxStartTranslateY = 0;
+  let lightboxPinchDistance = 0;
+  let lightboxPinchScale = 1;
+  let lightboxGesture = "";
   $(".gallery__arrow--prev").addEventListener("click", () => moveGallery(-1));
   $(".gallery__arrow--next").addEventListener("click", () => moveGallery(1));
   document.querySelectorAll(".gallery__thumbnail").forEach((thumbnail) => thumbnail.addEventListener("click", () => { if (!galleryAnimating) showGalleryImage(Number(thumbnail.dataset.galleryIndex)); }));
@@ -592,11 +630,43 @@ async function initGallery() {
   $("#lightbox-close").addEventListener("click", closeLightbox);
   $("#lightbox-prev").addEventListener("click", () => moveLightbox(-1));
   $("#lightbox-next").addEventListener("click", () => moveLightbox(1));
+  $("#lightbox-zoom-out").addEventListener("click", () => setLightboxZoom(lightboxScale - 0.5));
+  $("#lightbox-zoom-reset").addEventListener("click", resetLightboxZoom);
+  $("#lightbox-zoom-in").addEventListener("click", () => setLightboxZoom(lightboxScale + 0.5));
   $("#gallery-lightbox").addEventListener("click", (event) => { if (event.target === event.currentTarget) closeLightbox(); });
-  $("#gallery-lightbox").addEventListener("touchstart", (event) => { lightboxTouchStartX = event.changedTouches[0].clientX; }, { passive: true });
+  $("#lightbox-image").addEventListener("dblclick", () => setLightboxZoom(lightboxScale === 1 ? 2 : 1));
+  $("#lightbox-image").addEventListener("wheel", (event) => { event.preventDefault(); setLightboxZoom(lightboxScale + (event.deltaY < 0 ? 0.5 : -0.5)); }, { passive: false });
+  $("#gallery-lightbox").addEventListener("touchstart", (event) => {
+    if (event.touches.length === 2) {
+      lightboxGesture = "pinch";
+      lightboxPinchDistance = Math.hypot(event.touches[0].clientX - event.touches[1].clientX, event.touches[0].clientY - event.touches[1].clientY);
+      lightboxPinchScale = lightboxScale;
+      return;
+    }
+    lightboxGesture = lightboxScale > 1 ? "pan" : "swipe";
+    lightboxTouchStartX = event.touches[0].clientX;
+    lightboxTouchStartY = event.touches[0].clientY;
+    lightboxStartTranslateX = lightboxTranslateX;
+    lightboxStartTranslateY = lightboxTranslateY;
+  }, { passive: true });
+  $("#gallery-lightbox").addEventListener("touchmove", (event) => {
+    if (lightboxGesture === "pinch" && event.touches.length === 2) {
+      event.preventDefault();
+      const distance = Math.hypot(event.touches[0].clientX - event.touches[1].clientX, event.touches[0].clientY - event.touches[1].clientY);
+      setLightboxZoom(lightboxPinchScale * distance / lightboxPinchDistance);
+    } else if (lightboxGesture === "pan" && event.touches.length === 1) {
+      event.preventDefault();
+      lightboxTranslateX = lightboxStartTranslateX + event.touches[0].clientX - lightboxTouchStartX;
+      lightboxTranslateY = lightboxStartTranslateY + event.touches[0].clientY - lightboxTouchStartY;
+      applyLightboxZoom();
+    }
+  }, { passive: false });
   $("#gallery-lightbox").addEventListener("touchend", (event) => {
+    if (event.touches.length) return;
+    if (lightboxGesture !== "swipe") { lightboxGesture = ""; return; }
     const distance = event.changedTouches[0].clientX - lightboxTouchStartX;
     if (Math.abs(distance) > 45) moveLightbox(distance < 0 ? 1 : -1);
+    lightboxGesture = "";
   }, { passive: true });
   document.addEventListener("keydown", (event) => {
     if ($("#gallery-lightbox").hidden) return;
@@ -618,6 +688,9 @@ function renderGalleryLanguage() {
   $("#lightbox-close").setAttribute("aria-label", t.closePhoto);
   $("#lightbox-prev").setAttribute("aria-label", t.previousPhoto);
   $("#lightbox-next").setAttribute("aria-label", t.nextPhoto);
+  $("#lightbox-zoom-out").setAttribute("aria-label", language === "ko" ? "사진 축소" : "写真を縮小");
+  $("#lightbox-zoom-reset").setAttribute("aria-label", language === "ko" ? "확대 초기화" : "拡大をリセット");
+  $("#lightbox-zoom-in").setAttribute("aria-label", language === "ko" ? "사진 확대" : "写真を拡大");
   document.querySelectorAll(".gallery__thumbnail").forEach((thumbnail, index) => {
     const letter = String.fromCharCode(65 + index);
     thumbnail.setAttribute("aria-label", `Gallery ${letter} · ${t.thumbnail}`);
@@ -632,6 +705,13 @@ function renderGalleryLanguage() {
   showGalleryImage(galleryIndex);
 }
 
+function renderHeroCopy() {
+  document.querySelectorAll("[data-groom]").forEach((node) => { node.textContent = wedding.groom[language]; });
+  document.querySelectorAll("[data-bride]").forEach((node) => { node.textContent = wedding.bride[language]; });
+  document.querySelectorAll("[data-hero-date]").forEach((node) => { node.textContent = language === "ko" ? `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(일) 오후12:00` : `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(日) 12:00`; });
+  document.querySelectorAll("[data-hero-place]").forEach((node) => { node.textContent = wedding.venue[language]; });
+}
+
 function renderLanguage() {
   const t = translations[language];
   const locale = language === "ko" ? "ko-KR" : "ja-JP";
@@ -644,15 +724,14 @@ function renderLanguage() {
   document.querySelectorAll("[data-i18n]").forEach((node) => { node.textContent = t[node.dataset.i18n]; });
   document.querySelectorAll("[data-i18n-html]").forEach((node) => { node.innerHTML = t[node.dataset.i18nHtml]; });
   document.querySelectorAll("[data-i18n-placeholder]").forEach((node) => { node.placeholder = t[node.dataset.i18nPlaceholder]; });
-  document.querySelectorAll("[data-groom]").forEach((node) => { node.textContent = wedding.groom[language]; });
-  document.querySelectorAll("[data-bride]").forEach((node) => { node.textContent = wedding.bride[language]; });
-  setText("#hero-date", language === "ko" ? `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(일) 오후12:00` : `${eventYear}.${String(eventMonth).padStart(2, "0")}.${String(eventDay).padStart(2, "0")}(日) 12:00`);
-  setText("#hero-place", wedding.venue[language]);
+  renderHeroCopy();
   setText("#schedule-date", dateText);
+  setText("#schedule-note", t.scheduleNote);
   setText("#venue", wedding.venue[language]);
   setText("#address", wedding.address);
   setText("#bus", wedding.bus[language]);
   setText("#parking", wedding.parking[language]);
+  $("#location-map-image").src = language === "ja" ? "assets/images/location-map-ja.svg" : "assets/images/location-map.svg";
   $("#location-map-image").alt = t.mapImageAlt;
   $("#departure-guide").hidden = language !== "ja";
   renderGalleryLanguage();
@@ -665,6 +744,7 @@ function renderLanguage() {
 
 async function init() {
   if (Number.isNaN(date.getTime())) { console.error("The wedding date format is invalid."); return; }
+  renderHeroCopy();
   initHero();
   await initGallery();
   $("#guestbook-form").addEventListener("submit", submitGuestbook);
