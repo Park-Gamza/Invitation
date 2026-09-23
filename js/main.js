@@ -49,7 +49,7 @@ const wedding = {
 // Deploy the Apps Script project as a web app, then enter the URL ending in /exec.
 const guestbookEndpoint = "https://script.google.com/macros/s/AKfycbzwlfJ6y27snZXAvsvGnh9nUn2Pi3lmznSTXwOPx-aVQo2THe8rK8HsmnZyAWdJoLFz/exec";
 const siteUrl = "https://park-gamza.github.io/Invitation/";
-const shareVersion = "20260920";
+const shareVersion = "20260923";
 
 const translations = {
   ko: {
